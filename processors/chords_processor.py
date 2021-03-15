@@ -19,13 +19,14 @@ def chords_wav(tempo, key, instrument):
 
     midi.addTempo(track,time,tempo)
 
-
+    delay = randint(0,1)
+    print(delay)
 
     for chord in chords:
         i = 0
         for note in chord:
             
-            midi.addNote(track,channel,note,time+0.05*i,duration, volume)
+            midi.addNote(track,channel,note,time+0.05*i*delay,duration, volume)
             i+=1
 
         time +=2
@@ -37,4 +38,7 @@ def chords_wav(tempo, key, instrument):
 
     fs.midi_to_audio('midi/chords.mid', 'wav/chords.wav')
 
-    lowpass("wav/chords.wav", "wav/processed_chords.wav", 1000)
+    lowpass('wav/chords.wav', 'wav/processed_chords.wav', 1000)
+
+
+    return chords

@@ -1,4 +1,4 @@
-# Procedurally generated Lo-Fi Hip-Hop
+# Procedurally generated Lo-Fi Hip-Hopg
 
 This is a simple project dedicated to create loads of lo-fi hip-hop. It uses some of musical theory, simple (as for now) Markovian mechanism and a bunch of libraries for generating midi and wav file and fusing them together.
 
